@@ -6,7 +6,7 @@ const TrackingPage = () => {
   return (
     <div style={{ height: "100vh", width: "100%" }}>
       <LoadScript
-        googleMapsApiKey="AIzaSyCJYy_62-FNjEV74uwiXbI4JnZ_OAPjJfA"
+        googleMapsApiKey={process.env.REACT_APP_API_KEY_GOOGLE}
         libraries={["directions"]}
       >
         <GoogleMapsRender />
