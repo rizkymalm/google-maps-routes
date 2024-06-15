@@ -35,7 +35,7 @@ const HomePage = () => {
   });
   const [params, setParams] = useState({
     page: 0,
-    perPage: 10,
+    perPage: 25,
   });
   useEffect(() => {
     async function _getUserList() {
@@ -108,8 +108,8 @@ const HomePage = () => {
                     User name
                   </TableCell>
                   {rangeDates.length > 0 &&
-                    rangeDates.map((data) => (
-                      <TableCell sx={{ minWidth: "100px" }}>
+                    rangeDates.map((data, index) => (
+                      <TableCell sx={{ minWidth: "100px" }} key={index}>
                         {moment(data).format("DD-MMM")}
                       </TableCell>
                     ))}
